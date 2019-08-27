@@ -7,6 +7,7 @@ class Application
     if req.path.match(/items/)
       add_item = req.params["item"]
       item = @@items.find{|item| item.name == add_item}
+      binding.pry
       resp.write(add_item)
     else
       resp.write "Route not found"
