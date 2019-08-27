@@ -7,7 +7,7 @@ class Application
     if req.path.match(/items/)
       add_item = req.params["item"]
       item = @@items.find{|item| item.name == add_item}
-      resp.write("#{item.price}")
+      resp.write(item)
     else
       resp.write "Route not found"
       resp.status = 404
