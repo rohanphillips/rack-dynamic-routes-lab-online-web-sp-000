@@ -5,7 +5,7 @@ class Application
     req = Rack::Request.new(env)
 
     if req.path.match(/items/)
-      add_item = req.params[]
+      add_item = req.params
       item = @@items.find{|item| item.name == add_item}
       binding.pry
       resp.write(add_item)
