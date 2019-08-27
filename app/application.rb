@@ -10,7 +10,7 @@ class Application
       resp.status = 404
     end
     resp.write "Route not found"
-    resp.finish
+    #resp.finish
   end
 
 end
